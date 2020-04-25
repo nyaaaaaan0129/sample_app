@@ -1,0 +1,5 @@
+<h>投稿一覧</h>
+<% @lists.each do |list| %>
+  <p>タイトル</p>
+  <span><%=link_to list.title, "/todolists/#{list.id}" %></span>
+<% end %>
