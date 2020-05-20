@@ -10,7 +10,7 @@ class TodolistsController < ApplicationController
 
   	  list.save
 
-  	  redirect_to todolist_path(list.id)
+  	  redirect_to todolist_path(list)
   end
 
   def index
@@ -29,7 +29,7 @@ class TodolistsController < ApplicationController
   def update
       list = List.find(params[:id])
       list.update(list_params)
-      redirect_to todolist_path(list.id)
+      redirect_to todolist_path(list)
   end
   def destroy
       list = List.find(params[:id]) #データ(レコード)を1件取得
